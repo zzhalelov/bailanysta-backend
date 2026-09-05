@@ -1,0 +1,22 @@
+cat << 'EOF' > .gitignore
+# Gradle build output
+.gradle/
+build/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# OS specific
+.DS_Store
+Thumbs.db
+EOF
+
+HELP.md
+
+.gitattributes
