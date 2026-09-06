@@ -14,13 +14,20 @@ import java.util.Map;
 @Service
 public class GeminiService {
 
-    @Value("${gemini.api.key}")
+    // Считываем GEMINI_API_KEY из системного окружения, либо gemini.api.key из properties
+    @Value("${GEMINI_API_KEY:${gemini.api.key:}}")
     private String apiKey;
 
     private final RestTemplate restTemplate = new RestTemplate();
 
     public String generatePostContent(String topic) {
+        if (apiKey == null || apiKey.isBlank()) {
+            return "Ошибка: API ключ Gemini не задан в конфигурации приложения.";
+        }
+
+        // Использование актуальной модели gemini-2.0-flash
         String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=" + apiKey;
+
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
