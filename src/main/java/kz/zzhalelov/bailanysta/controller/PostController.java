@@ -16,9 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/posts")
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*", methods = {
-        RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT, RequestMethod.OPTIONS
-})
+@CrossOrigin(origins = {"http://localhost:5173", "https://bailanysta.zzhalelov.dev"})
 @RequiredArgsConstructor
 public class PostController {
 
