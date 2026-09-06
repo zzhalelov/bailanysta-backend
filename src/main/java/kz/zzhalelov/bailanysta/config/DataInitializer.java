@@ -24,7 +24,7 @@ public class DataInitializer implements CommandLineRunner {
                     .likesCount(3)
                     .comments(List.of(
                             Comment.builder().author("Aruzhan").text("Отличный дизайн!").build(),
-                            Comment.builder().author("Zhallelov").text("Добро пожаловать!").build()
+                            Comment.builder().author("Zhastilek").text("Добро пожаловать!").build()
                     ))
                     .build();
 
@@ -33,7 +33,7 @@ public class DataInitializer implements CommandLineRunner {
                     .content("Кто-нибудь уже пробовал сгенерировать пост с помощью ИИ?")
                     .likesCount(5)
                     .comments(List.of(
-                            Comment.builder().author("Nurlan").text("Да, работает супер!").build()
+                            Comment.builder().author("Nariman").text("Да, работает супер!").build()
                     ))
                     .build();
 
